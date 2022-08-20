@@ -7,10 +7,10 @@ class Product(models.Model):
 
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=30)
-    description = models.CharField(max_length=150)
-    picture = models.ImageField()
+    description = models.TextField(blank=True, null=True)
+    picture = models.ImageField(blank=True, null=True, default='p_0.jpg')
     creation_date = models.DateTimeField(default=timezone.now)
-    price = models.IntegerField()
+    price = models.FloatField()
 
 
 
